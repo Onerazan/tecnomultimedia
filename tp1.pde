@@ -43,7 +43,7 @@ void setup(){
   triangle(200, 325, 300, 375, 200, 425);
   
   // Drawing and coloring cyan green triangle
-  fill(159, 255, 0);
+  fill(0, 255, 159);
   triangle(300, 375, 400, 325, 400, 425);
   
   // DRAWING FRONT COLOURS
