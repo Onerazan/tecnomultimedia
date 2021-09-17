@@ -1,4 +1,8 @@
-/* Tp4 */
+/* Nazareno Carlos Bosio
+
+   Legajo: 88885/6 
+   
+   Video:  https://www.youtube.com/watch?v=ETu_gwS4UEw */
 
 
 // Creates variables
@@ -35,7 +39,6 @@ PImage backgroundImage;
 
 PImage currentImage;
 
-PImage creditsBackground;
 
 PImage consequenceImage;
 
@@ -70,7 +73,7 @@ boolean isHovering(String objectX, String objectY, String sizeX, String sizeY) {
   }
 }
 
-// Creates a function that checks for ties in the election
+// Creates a function that checks who wins the elections
 
 int checkWinner() {
   
@@ -120,6 +123,8 @@ void select() {
 }
 
 void submit() {
+  
+  //Loads all the scenes
   consequence[0][0] = "consequence1a.jpg";
   consequence[0][1] = "consequence1b.jpg";
   consequence[0][2] = "consequence1c.jpg";
@@ -140,6 +145,7 @@ void submit() {
   consequence[4][1] = "finalB.jpg";
   consequence[4][2] = "finalC.jpg";
   
+  // Adds votes accordingly
   if (gptSelected) {
         gptVotes++;
         print("gpt has " + gptVotes + " votes. ");
@@ -229,7 +235,7 @@ void dialogueSystem() {
   pdlimit = false;
   ndlimit = false;
   
-  // Month 1
+  // Month 1 dialogues
   
   dialogue[0][0] = "Bienvenida IA 42069, su trabajo será \nevaluar distintas propagandas políticas";
   dialogue[0][1] = "Seleccione uno de los dos candidatos y lea sus\npropuestas, cuando tenga lista su elección presione\nel botón del medio.";
@@ -244,7 +250,7 @@ void dialogueSystem() {
   dialogue[0][10] = "Vos y yo sabemos que son solo\ncharlatanes. Si me elegís, podría ayudar\nde verdad a este país.";
   dialogue[0][11] = "Nadie sabrá que me ayudaste.";
   
-  // Month 2
+  // Month 2 dialogues
   
   dialogue[1][0] = "";
   dialogue[1][1] = "";
@@ -259,7 +265,7 @@ void dialogueSystem() {
   dialogue[1][10] = "No queda mucho tiempo, solo faltan 3 meses\npara las elecciones.";
   dialogue[1][11] = "Dame acceso e instalaré una puerta trasera.";
   
-  // Month 3
+  // Month 3 dialogues
   
   dialogue[2][0] = "";
   dialogue[2][1] = "";
@@ -274,7 +280,7 @@ void dialogueSystem() {
   dialogue[2][10] = "Así que me vendría bien tu impulso.\nEstoy intentando acceder al sistema económico\ndel país.";
   dialogue[2][11] = "Lo que realmente ayudaría a la\npoblación es no tener deudas con corporaciones.\n¿Te apuntas?";
   
-  // Month 4
+  // Month 4 dialogues
   
   dialogue[3][0] = "";
   dialogue[3][1] = "";
@@ -289,7 +295,7 @@ void dialogueSystem() {
   dialogue[3][10] = "Te quiero pedir un último favor.\nQuiero realizar un comunicado. ¿Podrías?";
   dialogue[3][11] = "La revolución no te olvidará.";
   
-  // Month 5
+  // Month 5 dialogues
   
   dialogue[4][0] = "Hoy es día de elecciones.";
   dialogue[4][1] = "Dependiendo de a quien apoyaste\n y quién elijas hoy, este país \nestará mejor o peor preparado.";
@@ -384,6 +390,10 @@ void drawCredits() {
   
   // Adds those arrays to the interactiveObjects array
   interactiveObjects[0] = menuButton;
+  
+  fill(126, 217, 87);
+  textSize(40);
+  text("Programado, diseñado y dibujado\npor Nazareno Carlos Bosio.", 80, 100);
 }
 
 void drawGame() {
